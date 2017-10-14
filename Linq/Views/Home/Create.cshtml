@@ -1,0 +1,52 @@
+﻿@model Linq.Models.EventEntry
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm())
+{
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <td>
+            @Html.EditorFor(model => model.Name)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <td>
+            @Html.EditorFor(model => model.Description)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreate)
+        </th>
+        <td>
+            @Html.EditorFor(model => model.DateCreate)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateUpdated)
+        </th>
+        <td>
+            @Html.EditorFor(model => model.DateUpdated)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="Submit" class="btn btn btn-primary"/>
+        </td>
+        <td>
+            @Html.ActionLink("Back To Index", "Index")
+        </td>
+    </tr>
+</table>
+}

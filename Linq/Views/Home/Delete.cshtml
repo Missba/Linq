@@ -1,0 +1,61 @@
+﻿@model Linq.Models.EventEntry
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<h2>Are you sure to delete this record </h2>
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model=>model.Name)
+
+            </td>
+            <td>
+                @Html.DisplayFor(model=>model.Name)
+                @Html.ValidationMessageFor(model=>model.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Description)
+
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Description)
+                @Html.ValidationMessageFor(model => model.Description)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.DateCreate)
+
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.DateCreate)
+                @Html.ValidationMessageFor(model => model.DateCreate)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.DateUpdated)
+
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.DateUpdated)
+                @Html.ValidationMessageFor(model => model.DateUpdated)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Delete" class="btn btn-primary"
+/>            </td>
+            <td>
+                @Html.ActionLink("Cancel","Index")
+            </td>
+        </tr>
+    </table>
+}
